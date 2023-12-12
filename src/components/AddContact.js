@@ -17,7 +17,7 @@ const AddContact = ({ addContact }) => {
     }
 
     // Simple phone validation to check 10 digits
-    const phoneRegex = /^\d{10}$/;
+    const phoneRegex = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
     if (!phoneRegex.test(phone)) {
       alert("Invalid phone number (10 digits only)");
       return;
@@ -35,7 +35,7 @@ const AddContact = ({ addContact }) => {
   return (
     <div>
       <h2>Add Contact</h2>
-      // Form with controlled inputs
+      {/* Form with controlled inputs */}
       <form onSubmit={handleSubmit}>
         <label>Name:</label>
         <input
