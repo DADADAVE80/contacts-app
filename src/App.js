@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ContactList from "./components/ContactList";
 import AddContact from "./components/AddContact";
 import EditContactModal from "./components/EditContact";
+import './styles.css'
 
 const App = () => {
   // State to store the list of contacts
